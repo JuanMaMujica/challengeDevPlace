@@ -6,17 +6,17 @@ public class Ejercicio3 {
 
 	public static void main(String[] args) {
 		// Por teclado se ingresa el valor hora de un empleado. Posteriormente se ingresa el
-		//nombre del empleado, la antigüedad y la cantidad de horas trabajadas en el mes. Se
+		//nombre del empleado, la antiguedad y la cantidad de horas trabajadas en el mes. Se
 		//pide calcular el importe a cobrar teniendo en cuenta que al total que resulta de
-		//multiplicar el valor hora por la cantidad de horas trabajadas. Además, si el empleado
-		//tiene más de 10 años de antigüedad hay que sumarle la cantidad de años trabajados
-		//multiplicados por $30. Imprimir en pantalla el nombre, la antigüedad y el total a cobrar.
+		//multiplicar el valor hora por la cantidad de horas trabajadas. Ademas, si el empleado
+		//tiene mas de 10 anios de antiguedad hay que sumarle la cantidad de anios trabajados
+		//multiplicados por $30. Imprimir en pantalla el nombre, la antiguedad y el total a cobrar.
 
 		
 		//Se declara e inicializan las variables a utilizar
 		
 		Scanner scan = new Scanner(System.in);
-		int  cantHrTrabajadas=0, antiguedad=0;
+		int  cantHrTrabajadas=0, antiguedad=-1;
 		String nombre;
 		double valorHrTrabajada=0,importe=0;
 		
@@ -42,11 +42,11 @@ public class Ejercicio3 {
 		
 		importe = valorHrTrabajada * cantHrTrabajadas;	// Se calcula el importe del empleado 
 		
-		if(antiguedad > 10) {	//Condicion de antiguedad. Si tiene mas de 10 años de antiguedad se les suma al importa la cantidad de años multiplicados por 30
+		if(antiguedad > 10) {	//Condicion de antiguedad. Si tiene mas de 10 anios de antiguedad se les suma al importa la cantidad de anios multiplicados por 30
 			importe += antiguedad * 30;
 		}
 		
-		//Se muestra por pantalla el nombre, la antigüedad y el importe del empleado 
+		//Se muestra por pantalla el nombre, la antiguedad y el importe del empleado 
 		
 		System.out.println("Nombre: "+ nombre);
 		System.out.println("Antigüedad: " + antiguedad);
