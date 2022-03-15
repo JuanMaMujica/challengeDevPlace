@@ -36,6 +36,7 @@ public class Ejercicio1 {
 			else 
 				System.out.println("El número "+ n +" no es primo");
 			}
+		scan.close();
 		}
 	
 }
