@@ -16,22 +16,29 @@ public class Ejercicio3 {
 		//Se declara e inicializan las variables a utilizar
 		
 		Scanner scan = new Scanner(System.in);
-		int  cantHrTrabajadas, antiguedad;
+		int  cantHrTrabajadas=0, antiguedad=0;
 		String nombre;
-		double valorHrTrabajada,importe=0;
+		double valorHrTrabajada=0,importe=0;
 		
-		System.out.print("Ingrese el valor de la hora trabajada: $");	//Se ingresa el valor de la hora por teclado y se almacena en la variable valorHrTrabajada
-		valorHrTrabajada = scan.nextDouble();
+		while (valorHrTrabajada <= 0) {	//Ciclo while. asegura que no se ingrese un valor negativo o 0
+			System.out.print("Ingrese el valor de la hora trabajada: $");	//Se ingresa el valor de la hora por teclado y se almacena en la variable valorHrTrabajada
+			valorHrTrabajada = scan.nextDouble();
+		}
 		
 		System.out.print("Ingrese el nombre del empleado: ");	//Se ingresa el nombre y se almacena en su respectiva variable
 		scan.nextLine();	//Se utiliza el nextline para limpiar el buffer de entrada y poder leer correctamente el nombre 
 		nombre = scan.nextLine();
 		
-		System.out.print("Ingrese la antiguedad del empleado: ");	// Se ingresa la antiguedad y se almacena en su variable 
-		antiguedad = scan.nextInt();
 		
-		System.out.print("Ingrese la cantidad de horas trabajadas: ");	// Se ingresa la cantidad de horas trabajadas y se almacena en su respectiva variable 
-		cantHrTrabajadas = scan.nextInt();
+		while (antiguedad<0) {	//Ciclo while. Asegura que no se ingrese un valor negativo 
+			System.out.print("Ingrese la antiguedad del empleado: ");	// Se ingresa la antiguedad y se almacena en su variable 
+			antiguedad = scan.nextInt();
+		}
+
+		while(cantHrTrabajadas<=0) {	//Ciclo while. Asegura que no se ingrese un valor negativo o 0
+			System.out.print("Ingrese la cantidad de horas trabajadas: ");	// Se ingresa la cantidad de horas trabajadas y se almacena en su respectiva variable 
+			cantHrTrabajadas = scan.nextInt();
+		}
 		
 		importe = valorHrTrabajada * cantHrTrabajadas;	// Se calcula el importe del empleado 
 		
