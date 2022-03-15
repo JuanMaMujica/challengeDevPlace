@@ -24,13 +24,8 @@ CREATE TABLE IF NOT EXISTS puesto (
   id_empleado int(10) UNSIGNED NOT NULL,
   nombre_puesto varchar(40) NOT NULL,
   antiguedad tinyint(3) UNSIGNED NOT NULL,
-  KEY empleadoPuesto (id_empleado)	/* Creamos la relacion de la tabla Puesto con Empleados a traves del campo id_empleado*/
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
-CREATE TABLE IF NOT EXISTS salarios (
-  id_empleado int(10) UNSIGNED NOT NULL,
   salario float UNSIGNED NOT NULL,
-  KEY empleadoSalario (id_empleado)	/*Creamos la relacion de la tabla Salarios con Empleados a traves del campo id_empleado*/
+  KEY empleadoPuesto (id_empleado)	/* Creamos la relacion de la tabla Puesto con Empleados a traves del campo id_empleado*/
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 /*Indicamos que la clave foranea de la tabla empleados que relaciona a la tabla empleados con la de municipios a traves de la relacion municipioPerteneciente es id_municipio*/
@@ -40,7 +35,3 @@ ALTER TABLE empleados
 /*Indicamos que la clave foranea de la tabla puesto que relaciona a la tambla puesto con la de empleados a traves de la relacion empleadoPuesto es id_empleado*/
 ALTER TABLE puesto
   ADD CONSTRAINT empleadoPuesto FOREIGN KEY (id_empleado) REFERENCES empleados (id_empleado);
-
-/*Indicamos que la clave foranea de la tabla salarios que relaciona a la tabla salarios con la de empleados a traves de la relacion empleadoSalario es id_empleado*/
-ALTER TABLE salarios
-  ADD CONSTRAINT empleadoSalario FOREIGN KEY (id_empleado) REFERENCES empleados (id_empleado);
