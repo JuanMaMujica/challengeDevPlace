@@ -71,8 +71,8 @@ public class Password {
 				cantMayusc+=1;	//Se suma 1 a la cantidad de mayusculas en la contraseña
 			else if (Character.isLowerCase(caracter))	//Con la clase Character (primitiva de Java) se utiliza el método isLowerCase para saber si el caracter pasado por parámetro es minúscula
 				cantMinusc+=1;	//Se suma 1 a la cantidad de caracteres en minúscula
-			else
-				cantNum+=1;	//En caso de que no sean ninguno de los dos anteriores se sabe que es un número
+				else
+					cantNum+=1;	//En caso de que no sean ninguno de los dos anteriores se sabe que es un número
 		}
 		
 //		Retorna el valor de la condicion, en caso de que se cumplan todas las condiciones devuelve true, caso contrario devuelve false 
